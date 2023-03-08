@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated testmonts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/1.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Sukhrob Safarov</h3>
+                        <div class="starts">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Tenetur, est ea, natus, quos facere reprehenderit ratione alias libero expedita numquam 
+                    minus ad velit! Quod asperiores voluptatibus cupiditate temporibus numquam. Ut?
+                </p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/2.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Sukhrob Safarov</h3>
+                        <div class="starts">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Tenetur, est ea, natus, quos facere reprehenderit ratione alias libero expedita numquam 
+                    minus ad velit! Quod asperiores voluptatibus cupiditate temporibus numquam. Ut?
+                </p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/3.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Sukhrob Safarov</h3>
+                        <div class="starts">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Tenetur, est ea, natus, quos facere reprehenderit ratione alias libero expedita numquam 
+                    minus ad velit! Quod asperiores voluptatibus cupiditate temporibus numquam. Ut?
+                </p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/4.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Sukhrob Safarov</h3>
+                        <div class="starts">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Tenetur, est ea, natus, quos facere reprehenderit ratione alias libero expedita numquam 
+                    minus ad velit! Quod asperiores voluptatibus cupiditate temporibus numquam. Ut?
+                </p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="images/5.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Sukhrob Safarov</h3>
+                        <div class="starts">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Tenetur, est ea, natus, quos facere reprehenderit ratione alias libero expedita numquam 
+                    minus ad velit! Quod asperiores voluptatibus cupiditate temporibus numquam. Ut?
+                </p>
+            </div>
+        </div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    </div>
+    <script>
+        let slides =document.querySelectorAll('.slide-container');
+        let index = 0;
+        function next() {
+            slides[index].classList.remove('active'); 
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        function prev() {
+            slides[index].classList.remove('active');   
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>
